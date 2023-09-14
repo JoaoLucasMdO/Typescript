@@ -1,0 +1,6 @@
+1-Entrar na pasta
+2-npm init -y
+3-npm install -d/-g typescript  
+-d = instalação na pasta/ -g = instalação globalmente
+4-Criar pasta 'src'
+5-npx tsc --init |Sem estar na pasta src
