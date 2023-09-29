@@ -1,1 +1,42 @@
-<p>produto-form works!</p>
+<div class="card">
+    <div class="card-header bg-primary text-light">
+        {{title}}
+    </div>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" 
+            name="descricao"
+            #descricao="ngModel"
+            class="form-control" 
+            required 
+            minlength="5"
+            id="descricao"
+            [(ngModel)] = "produto.decricao">
+        </div>
+        <div class="form-group">
+            <label for="peso">Peso</label>
+            <input type="number"
+            name="peso"
+            #peso="ngModel"
+            class="form-control" 
+            required 
+            min="0"
+            id="peso"
+            [(ngModel)] = "produto.peso">
+        </div>
+        <div class="form-group">
+            <label for="limitC">Preço</label>
+            <input type="number" 
+            name="preco"
+            #preco="ngModel"
+            class="form-control" 
+            min="0"
+            required
+            id="peso"
+            [(ngModel)] = "produto.preco">
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Salvar</button>
+        <a class="btn btn-outline-danger" href="">Cancelar</a>
+    </form>
+</div>

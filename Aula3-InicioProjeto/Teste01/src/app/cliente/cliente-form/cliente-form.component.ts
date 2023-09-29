@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cliente } from '../shared/cliente';
 
 @Component({
   selector: 'app-cliente-form',
@@ -6,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./cliente-form.component.css']
 })
 export class ClienteFormComponent {
+//Criando variavel do tipo Cliente
+'cliente' : Cliente;
+
+//Criando variável vazia
+title = '';
+
+constructor(){
+}
+
+ngOnInit(){
+  this.title = 'Novo Cliente';
+  this.cliente = new Cliente();  
+}
+
+onSubmit(){
+console.log(this.cliente);
 
 }
+
+}
+
+
